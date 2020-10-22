@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Abilities/fireball.png" type="Texture" id=1]
+[ext_resource path="res://Abilities/_002Fireball.cs" type="Script" id=2]
+[ext_resource path="res://Abilities/HitboxFireball.cs" type="Script" id=3]
+[ext_resource path="res://Abilities/fireball_effects.png" type="Texture" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 12.8151
+height = 5.99551
+
+[sub_resource type="ParticlesMaterial" id=2]
+trail_divisor = 2
+emission_shape = 1
+emission_sphere_radius = 5.0
+flag_align_y = true
+flag_rotate_y = true
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 98, 0 )
+hue_variation_random = 0.07
+
+[node name="_002Fireball" type="KinematicBody2D"]
+script = ExtResource( 2 )
+AbilityName = "Fireball"
+AttackPower = 1
+KnockbackPower = 1
+UserAnimation = "STATE_ATTACK"
+
+[node name="HitboxPivot" type="Position2D" parent="."]
+
+[node name="HitboxFireball" type="Area2D" parent="HitboxPivot"]
+collision_layer = 0
+collision_mask = 9
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxPivot/HitboxFireball"]
+position = Vector2( -0.0715942, 3.47162 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="HitboxPivot/HitboxFireball"]
+light_mask = 9
+position = Vector2( 0, -6 )
+rotation = 3.14159
+scale = Vector2( 0.4, 0.4 )
+amount = 32
+lifetime = 0.6
+speed_scale = 3.0
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource( 2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="HitboxPivot"]
+position = Vector2( -0.0846786, 0.762066 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+[connection signal="area_entered" from="HitboxPivot/HitboxFireball" to="." method="_on_HitboxFireball_area_entered"]

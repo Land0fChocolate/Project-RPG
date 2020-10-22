@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Tools</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3C9564C-BA62-4D61-BE2C-3DCB71DE23DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>.mono\temp\bin\$(Configuration)</OutputPath>
+    <RootNamespace>ProjectRPG</RootNamespace>
+    <AssemblyName>Project RPG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <GodotProjectGeneratorVersion>1.0.7374.16792</GodotProjectGeneratorVersion>
+    <BaseIntermediateOutputPath>.mono\temp\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
+    <ApiConfiguration Condition=" '$(Configuration)' != 'Release' ">Debug</ApiConfiguration>
+    <ApiConfiguration Condition=" '$(Configuration)' == 'Release' ">Release</ApiConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Tools|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;DEBUG;TOOLS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp">
+      <Private>False</Private>
+      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GodotSharpEditor" Condition=" '$(Configuration)' == 'Tools' ">
+      <Private>False</Private>
+      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharpEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilities.cs" />
+    <Compile Include="Abilities\HitboxFireball.cs" />
+    <Compile Include="Abilities\HitboxSword.cs" />
+    <Compile Include="Abilities\_001SwordSwipe.cs" />
+    <Compile Include="Abilities\_002Fireball.cs" />
+    <Compile Include="Ability.cs" />
+    <Compile Include="AbilityCatalog.cs" />
+    <Compile Include="AbilityStats.cs" />
+    <Compile Include="Camera2D.cs" />
+    <Compile Include="Effects\Effect.cs" />
+    <Compile Include="Enemies\Bat.cs" />
+    <Compile Include="Enemies\PlayerDetectionZone.cs" />
+    <Compile Include="Enemies\WanderController.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="HitHurtBoxes\Hitbox.cs" />
+    <Compile Include="HitHurtBoxes\Hurtbox.cs" />
+    <Compile Include="HitHurtBoxes\SoftCollision.cs" />
+    <Compile Include="NPC.cs" />
+    <Compile Include="Pins\Pin.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\PlayerHurtSound.cs" />
+    <Compile Include="Player\SwordHitbox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="UI\HealthUI.cs" />
+    <Compile Include="World\Grass.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
