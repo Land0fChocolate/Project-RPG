@@ -1,3 +1,8 @@
+Project RPG
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 [![version](https://img.shields.io/badge/plugin%20version-1.2.2-blue)](https://github.com/fenix-hub/godot-engine.github-integration)
 [![updates](https://img.shields.io/badge/plugin%20updates-on%20discord-purple)](https://discord.gg/KnJGY9S)
 [![paypal](https://img.shields.io/badge/donations-PayPal-cyan)](https://paypal.me/NSantilio?locale.x=it_IT)
