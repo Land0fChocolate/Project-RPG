@@ -45,6 +45,8 @@
     <Compile Include="Player\SwordHitbox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stats.cs" />
+    <Compile Include="StatusEffect.cs" />
+    <Compile Include="Status_Stun.cs" />
     <Compile Include="UI\HealthUI.cs" />
     <Compile Include="World\Grass.cs" />
   </ItemGroup>

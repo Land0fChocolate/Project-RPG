@@ -272,7 +272,6 @@ public class Player : KinematicBody2D
 			if (wieldedSlotSet[i].AssignedPin != null){
 				WieldedAbilityScene[i] = (PackedScene)ResourceLoader.Load(wieldedSlotSet[i].AssignedPin.AbilityAddress);
 				if (wieldedSlotSet[i].AssignedPin.Passive){
-					GD.Print("Instance passive ability in slot ", i+1);
 					WieldedAbility[i] = (Ability)WieldedAbilityScene[i].Instance();
 					Node world = GetTree().CurrentScene;
 					world.CallDeferred("add_child", WieldedAbility[i]);

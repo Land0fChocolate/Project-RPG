@@ -12,7 +12,7 @@ public class _006StandHeal : Ability
 		playerStats = (Stats)GetNode("/root/PlayerStats");
 		timer = (Timer)GetNode("Timer");
 		player = (Player)GetNode("/root/World/Objects/Player");
-		AddToGroup(Global.PlayerActivePassives);
+		AddToGroup(Global.PlayerActivePassives); //TODO: rework this. Probably move this line to Player and/or NPC. Right now this would make an NPC add their passives to PlayerActivePassives.
 	}
 	
 	public override void _PhysicsProcess(float delta){
