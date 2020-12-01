@@ -5,6 +5,7 @@ Project RPG
 ----bugs----
 
 ----features----
+
   -Status effects. Using an ability that stuns enemies.
 
   -Use SRP interface style to make an interface for the monsters/NPCs. Perhaps use a GetNode to get the WanderController.
