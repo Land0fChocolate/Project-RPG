@@ -20,6 +20,9 @@ public class _003Thing : Ability
 		StunScene = (PackedScene)ResourceLoader.Load("res://Abilities/Status_stun.tscn");
 		Stun = (StatusEffect)StunScene.Instance();
 		Stun.Time = 2;
+		Hurtbox hb = (Hurtbox)area;
+		NPC npc = (NPC)hb.Owner;
+		Stun.Target = npc;
 		
 		Node world = GetTree().CurrentScene;
 		world.AddChild(Stun);

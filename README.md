@@ -1,36 +1,3 @@
-Project RPG
-
------------TDL----------
-
-----bugs----
-
-----features----
-
-  -Status effects. Using an ability that stuns enemies.
-
-  -Use SRP interface style to make an interface for the monsters/NPCs. Perhaps use a GetNode to get the WanderController.
-
-  -NPCs and Player should have the same parent, so that their interactions with the environment will be the same.
-
-  -Ability will need a field for its author. So friendly casted abilities only hit enemies and enemy casted abilities will only hit friendlies.
-
-  -inventory
-
-  -slotset switching
-
-  -terrain creation ability
-
-  -implementing cooldowns
-
-  -implementing ammunition
-
-  -pin experience gain and level ups
-
-  -rename the pins class
-
-
-----------------------------------------------------------------------------------------------------------------------------------
-
 [![version](https://img.shields.io/badge/plugin%20version-1.2.2-blue)](https://github.com/fenix-hub/godot-engine.github-integration)
 [![updates](https://img.shields.io/badge/plugin%20updates-on%20discord-purple)](https://discord.gg/KnJGY9S)
 [![paypal](https://img.shields.io/badge/donations-PayPal-cyan)](https://paypal.me/NSantilio?locale.x=it_IT)
