@@ -19,10 +19,11 @@ public class _003Thing : Ability
 	private void _on_HitboxThing_area_entered(object area){
 		StunScene = (PackedScene)ResourceLoader.Load("res://Abilities/Status_stun.tscn");
 		Stun = (StatusEffect)StunScene.Instance();
-		Stun.Time = 2;
+		Stun.Time = 3;
 		Hurtbox hb = (Hurtbox)area;
-		NPC npc = (NPC)hb.Owner;
-		Stun.Target = npc;
+		
+		Entity target = (Entity)hb.Owner;
+		Stun.Target = target;
 		
 		Node world = GetTree().CurrentScene;
 		world.AddChild(Stun);

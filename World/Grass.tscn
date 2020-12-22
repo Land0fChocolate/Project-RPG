@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.96605, 7.03418 )
 
-[node name="Grass" type="Node2D"]
+[node name="Grass" type="KinematicBody2D"]
 position = Vector2( 8.31656, 12.5788 )
 script = ExtResource( 2 )
 

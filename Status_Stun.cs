@@ -7,8 +7,8 @@ public class Status_Stun : StatusEffect
 	public int originalMaxSpeed;
 	
 	public override void _Ready(){
+		//TODO: check to see if the target is a WorldObject. If true, then just QueueFree this instance immediately. 
 		timer = (Timer)GetNode("Timer");
-		//timer.Start(Time);
 		originalMaxSpeed = Target.MaxSpeed;
 		//AddToGroup([put something here]); //TODO: make a group for status effects for cleansing abilities.
 		
@@ -17,6 +17,7 @@ public class Status_Stun : StatusEffect
 	
 	public void StunTarget(){
 		Target.MaxSpeed = 0;
+		//TODO: create visual effect.
 	}
 	
 	public void EndStatusEffect(){

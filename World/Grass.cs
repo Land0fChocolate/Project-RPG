@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Grass : Node2D
+public class Grass : Entity
 {
 	private void _on_Hurtbox_area_entered(object area){
 		createGrassEffect();

@@ -33,6 +33,7 @@
     <Compile Include="Enemies\Bat.cs" />
     <Compile Include="Enemies\PlayerDetectionZone.cs" />
     <Compile Include="Enemies\WanderController.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="HitHurtBoxes\Hitbox.cs" />
     <Compile Include="HitHurtBoxes\Hurtbox.cs" />

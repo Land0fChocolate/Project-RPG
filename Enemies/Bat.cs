@@ -97,7 +97,7 @@ public class Bat : NPC
 		Hitbox hitbox = (Hitbox)area;
 		Knockback = hitbox.KnockbackVector * 220;
 		stats.Health -= hitbox.Damage;
-		animationPlayer.Play("Start");
+		animationPlayer.Play("Hit");
 	}
 	
 	private void _on_Stats_NoHealth(){
