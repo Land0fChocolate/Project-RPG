@@ -1,7 +1,5 @@
 -----------Project RPG TDL----------
 
-----bugs----
-
 ----features----
 
 -Use SRP interface style to make an interface for the monsters/NPCs. Perhaps use a GetNode to get the WanderController.
@@ -21,3 +19,7 @@
 -pin experience gain and level ups
 
 -rename the pins class
+
+----bugs----
+
+-
