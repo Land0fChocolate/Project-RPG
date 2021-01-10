@@ -13,5 +13,5 @@ public class NPC : Entity
 	public PlayerDetectionZone playerDetectionZone = null;
 	public Player player = null;
 	
-	//TODO: could have general methods in here like Idle() and Wander() that have nothing in them, but the children of Entity override them with their own methods.
+	//TODO: could have general methods in here like Idle() and Wander() that have nothing in them, but the children of NPC override them with their own methods.
 }

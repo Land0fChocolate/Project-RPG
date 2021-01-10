@@ -17,7 +17,7 @@ public class Status_Stun : StatusEffect
 	
 	public void StunTarget(){
 		Target.MaxSpeed = 0;
-		//TODO: create visual effect.
+		//TODO: create visual effect on the target while it is affected by the stun.
 	}
 	
 	public void EndStatusEffect(){
