@@ -2,7 +2,7 @@
 
 ----bugs----
 
--Using Thing ability on grass will crash the game. To be fixed after the NPC/Player rework.
+-
 
 ----features----
 
