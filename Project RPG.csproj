@@ -38,8 +38,8 @@
     <Compile Include="HitHurtBoxes\Hitbox.cs" />
     <Compile Include="HitHurtBoxes\Hurtbox.cs" />
     <Compile Include="HitHurtBoxes\SoftCollision.cs" />
+    <Compile Include="UI\Ability Icons\Item.cs" />
     <Compile Include="NPC.cs" />
-    <Compile Include="Abilities\Item.cs" />
     <Compile Include="Pins\Pin.cs" />
     <Compile Include="Player\Player.cs" />
     <Compile Include="Player\PlayerHurtSound.cs" />
@@ -49,6 +49,10 @@
     <Compile Include="StatusEffect.cs" />
     <Compile Include="Status_Stun.cs" />
     <Compile Include="UI\HealthUI.cs" />
+    <Compile Include="UI\Inventory.cs" />
+    <Compile Include="UI\InventoryContainer.cs" />
+    <Compile Include="UI\InventoryDisplay.cs" />
+    <Compile Include="UI\InventorySlotDisplay.cs" />
     <Compile Include="World\Grass.cs" />
   </ItemGroup>
 </Project>
